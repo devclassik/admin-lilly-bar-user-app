@@ -25,7 +25,7 @@ const UnitCountOne = () => {
             </div>
             <p className="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
               <span className="d-inline-flex align-items-center gap-1 text-success-main">
-                <Icon icon="bxs:up-arrow" className="text-xs" /> {formatNumber(getAllData('clientData').length)}
+                <Icon icon="bxs:up-arrow" className="text-xs" /> {formatNumber(getAllData('clientData')?.length || 0)}
               </span>
               Last 30 days users
             </p>
