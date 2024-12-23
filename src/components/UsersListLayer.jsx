@@ -46,9 +46,9 @@ const UsersListLayer = () => {
   // Paginate data
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredData?.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredData?.length / itemsPerPage);
 
   const handlePageChange = (page) => setCurrentPage(page);
 
