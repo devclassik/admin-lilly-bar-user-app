@@ -98,7 +98,7 @@ const UsersListLayer = () => {
               </tr>
             </thead>
             <tbody>
-              {currentItems.map((data, index) => (
+              {currentItems?.map((data, index) => (
                 <tr key={index}>
                   <td>
                     <div className="d-flex align-items-center gap-10">
@@ -112,20 +112,20 @@ const UsersListLayer = () => {
                       {index + 1}
                     </div>
                   </td>
-                  <td>{new Date(data.date_joined).toDateString()}</td>
-                  <td>{data.first_name} {data.last_name || "N/A"}</td>
-                  <td>{data.email || "N/A"}</td>
-                  <td>{data.phone_number || "N/A"}</td>
-                  <td>{data.user_home_address || "N/A"}</td>
+                  <td>{new Date(data?.date_joined)?.toDateString()}</td>
+                  <td>{data?.first_name} {data?.last_name || "N/A"}</td>
+                  <td>{data?.email || "N/A"}</td>
+                  <td>{data?.phone_number || "N/A"}</td>
+                  <td>{data?.user_home_address || "N/A"}</td>
                   <td className="text-center">
                     <span
                       className={`bg-${
-                        data.is_active
+                        data?.is_active
                           ? "success-focus text-success-600 border-success-main"
                           : "danger-focus text-danger-600 border-danger-main"
                       } px-24 py-4 radius-4 fw-medium text-sm`}
                     >
-                      {data.is_active ? "Active" : "Inactive"}
+                      {data?.is_active ? "Active" : "Inactive"}
                     </span>
                   </td>
                   <td className="text-center">
