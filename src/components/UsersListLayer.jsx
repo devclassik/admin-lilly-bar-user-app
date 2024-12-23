@@ -147,8 +147,8 @@ const UsersListLayer = () => {
         <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-24">
           <span>
             Showing {indexOfFirstItem + 1} to{" "}
-            {Math.min(indexOfLastItem, filteredData.length)} of{" "}
-            {filteredData.length} entries
+            {Math.min(indexOfLastItem, filteredData?.length)} of{" "}
+            {filteredData?.length} entries
           </span>
           <ul className="pagination d-flex flex-wrap align-items-center gap-2 justify-content-center">
             {Array.from({ length: totalPages }, (_, i) => (
