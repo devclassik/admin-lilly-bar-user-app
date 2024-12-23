@@ -31,7 +31,7 @@ const UsersListLayer = () => {
   }, [navigate]);
 
   // Filter data based on search
-  const filteredData = getAllData("clientData").filter((user) => {
+  const filteredData = getAllData("clientData")?.filter((user) => {
     const firstName = user.first_name || "";
     const lastName = user.last_name || "";  
     const email = user.email || "";         
